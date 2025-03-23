@@ -12,7 +12,7 @@ public class TaskController : TodolistApiBaseController
 {
     [HttpPost]
     [ProducesResponseType(typeof(ResponseRegisterTaskJson), StatusCodes.Status201Created)]
-    [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
     public IActionResult Register([FromBody] RequestTaskJson request)
     {
         var response = new RegisterTaskUseCase().Execute(request);
@@ -33,7 +33,7 @@ public class TaskController : TodolistApiBaseController
     [HttpGet]
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponseTaskJson), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     public IActionResult GetById([FromRoute] int id)
     {
         var response = new GetTaskByIdUseCase().Execute(id);
@@ -52,7 +52,7 @@ public class TaskController : TodolistApiBaseController
     [HttpDelete]
     [Route("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     public IActionResult Delete([FromRoute] int id)
     {
         new DeleteTaskByIdUseCase().Execute(id);
