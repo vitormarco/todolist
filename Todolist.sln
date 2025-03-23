@@ -1,13 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35806.99 d17.13
+VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todolist.API", "Todolist.API\Todolist.API.csproj", "{BA2B097E-5DDD-4BB7-8DEA-3F3066C5D74F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todolist.API", "src\Todolist.API\Todolist.API.csproj", "{BA2B097E-5DDD-4BB7-8DEA-3F3066C5D74F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todolist.Application", "Todolist.Application\Todolist.Application.csproj", "{68511653-90E6-4096-BCF6-F26D0A02D653}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todolist.Application", "src\Todolist.Application\Todolist.Application.csproj", "{68511653-90E6-4096-BCF6-F26D0A02D653}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todolist.Communication", "Todolist.Communication\Todolist.Communication.csproj", "{155A71FA-25EB-4D22-9467-F7BDB4BDE317}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todolist.Communication", "src\Todolist.Communication\Todolist.Communication.csproj", "{155A71FA-25EB-4D22-9467-F7BDB4BDE317}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F8B2FEE0-912C-4F81-BBDF-5DD420BC7FC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todolist.Exception", "src\Todolist.Exception\Todolist.Exception.csproj", "{91F2842D-5BF7-4B0E-9C2D-251EB5530D5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todolist.Domain", "src\Petfolio.Domain\Todolist.Domain.csproj", "{8E52BD91-03B9-4420-8741-CDB69668D03E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todolist.Infrastructure", "Todolist.Infrastructure\Todolist.Infrastructure.csproj", "{5DFD4773-F08A-444C-B5B0-2D77A1E565D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTestUtilities", "tests\CommonTestUtilities\CommonTestUtilities.csproj", "{E4535A14-F147-4BD8-BA83-BB111D91E8E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validators.Tests", "tests\Validators.Tests\Validators.Tests.csproj", "{2AF55DC6-7BE2-4739-AE04-79780FF51EDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +41,39 @@ Global
 		{155A71FA-25EB-4D22-9467-F7BDB4BDE317}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{155A71FA-25EB-4D22-9467-F7BDB4BDE317}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{155A71FA-25EB-4D22-9467-F7BDB4BDE317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F2842D-5BF7-4B0E-9C2D-251EB5530D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F2842D-5BF7-4B0E-9C2D-251EB5530D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F2842D-5BF7-4B0E-9C2D-251EB5530D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F2842D-5BF7-4B0E-9C2D-251EB5530D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E52BD91-03B9-4420-8741-CDB69668D03E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E52BD91-03B9-4420-8741-CDB69668D03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E52BD91-03B9-4420-8741-CDB69668D03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E52BD91-03B9-4420-8741-CDB69668D03E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DFD4773-F08A-444C-B5B0-2D77A1E565D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFD4773-F08A-444C-B5B0-2D77A1E565D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DFD4773-F08A-444C-B5B0-2D77A1E565D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DFD4773-F08A-444C-B5B0-2D77A1E565D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4535A14-F147-4BD8-BA83-BB111D91E8E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4535A14-F147-4BD8-BA83-BB111D91E8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4535A14-F147-4BD8-BA83-BB111D91E8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4535A14-F147-4BD8-BA83-BB111D91E8E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF55DC6-7BE2-4739-AE04-79780FF51EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF55DC6-7BE2-4739-AE04-79780FF51EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF55DC6-7BE2-4739-AE04-79780FF51EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF55DC6-7BE2-4739-AE04-79780FF51EDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BA2B097E-5DDD-4BB7-8DEA-3F3066C5D74F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{68511653-90E6-4096-BCF6-F26D0A02D653} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{155A71FA-25EB-4D22-9467-F7BDB4BDE317} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{91F2842D-5BF7-4B0E-9C2D-251EB5530D5F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{8E52BD91-03B9-4420-8741-CDB69668D03E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{5DFD4773-F08A-444C-B5B0-2D77A1E565D1} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{E4535A14-F147-4BD8-BA83-BB111D91E8E6} = {F8B2FEE0-912C-4F81-BBDF-5DD420BC7FC3}
+		{2AF55DC6-7BE2-4739-AE04-79780FF51EDB} = {F8B2FEE0-912C-4F81-BBDF-5DD420BC7FC3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC15E14C-7A67-41EA-AA8A-D3AD5FF53C2C}
